@@ -1,14 +1,14 @@
 pipeline {
     agent any
     environment {
-        NUMBER1 = 50
-        NUMBER2 = 10
+        NUMBER1 = '50'
+        NUMBER2 = '10'
     }
     stages {
         stage('Addition') {
             steps {
                 script {
-                    def sum = (NUMBER1 + NUMBER2)
+                    def sum = (NUMBER1.toInteger() + NUMBER2.toInteger())
                     echo "The Added value is ${sum}"
                 }
             }
