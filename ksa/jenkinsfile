@@ -9,7 +9,7 @@ pipeline{
             echo(message: 'Deploy')
         }
          stage('Test'){
-            echo(message: 'Test')
+            echo(message: 'Test ')
         }
     }
 }
