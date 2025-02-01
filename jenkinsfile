@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Start'){
+            echo(message: 'start')
+        }
+         stage('Deploy'){
+            echo(message: 'Deploy')
+        }
+         stage('Test'){
+            echo(message: 'Test')
+        }
+    }
+}
