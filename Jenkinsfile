@@ -8,7 +8,7 @@ pipeline {
         stage('Addition') {
             steps {
                 script {
-                    def sum = NUMBER1 + NUMBER2
+                    def sum = (NUMBER1 + NUMBER2)
                     echo "The Added value is ${sum}"
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
         stage('Subtraction') {
             steps {
                 script {
-                    def sub = NUMBER1 - NUMBER2
+                    def sub = (NUMBER1 - NUMBER2)
                     echo "The Subtracted value is ${sub}"
                 }
             }
@@ -24,7 +24,7 @@ pipeline {
         stage('Multiplication') {
             steps {
                 script {
-                    def mul = NUMBER1 * NUMBER2
+                    def mul = (NUMBER1 * NUMBER2)
                     echo "The Multiplied value is ${mul}"
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
         stage('Division') {
             steps {
                 script {
-                    def divide = NUMBER1 / NUMBER2
+                    def divide = (NUMBER1 / NUMBER2)
                     echo "The Divided value is ${divide}"
                 }
             }
