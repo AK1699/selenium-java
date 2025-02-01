@@ -16,7 +16,7 @@ pipeline {
         stage('Subtraction') {
             steps {
                 script {
-                    def sub = (NUMBER1 - NUMBER2)
+                    def sub = (NUMBER1.toInteger() - NUMBER2.toInteger())
                     echo "The Subtracted value is ${sub}"
                 }
             }
@@ -24,7 +24,7 @@ pipeline {
         stage('Multiplication') {
             steps {
                 script {
-                    def mul = (NUMBER1 * NUMBER2)
+                    def mul = (NUMBER1.toInteger() * NUMBER2.toInteger())
                     echo "The Multiplied value is ${mul}"
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
         stage('Division') {
             steps {
                 script {
-                    def divide = (NUMBER1 / NUMBER2)
+                    def divide = (NUMBER1.toInteger() / NUMBER2.toInteger())
                     echo "The Divided value is ${divide}"
                 }
             }
