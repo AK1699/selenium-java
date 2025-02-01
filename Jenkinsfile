@@ -6,7 +6,8 @@ pipeline {
     }
     stages {
         stage('Sequencial Execution'){
-            stage('Addition') {
+            stages{
+        stage('Addition') {
             steps {
                 script {
                     def sum = (NUMBER1.toInteger() + NUMBER2.toInteger())
@@ -22,6 +23,8 @@ pipeline {
                 }
             }
         }
+            }
+            
         }
         
         stage("Parallel Execution"){
