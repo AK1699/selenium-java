@@ -1,8 +1,8 @@
 pipeline{
     agent any 
 environment{
-    NUMBER1 = '50'
-    NUMBER2 = '10'
+    NUMBER1 = 50
+    NUMBER2 = 10
 }
     stages{
        stage('Addition'){
