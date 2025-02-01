@@ -5,7 +5,8 @@ pipeline {
         NUMBER2 = '10'
     }
     stages {
-        stage('Addition') {
+        stage('Sequencial Execution'){
+            stage('Addition') {
             steps {
                 script {
                     def sum = (NUMBER1.toInteger() + NUMBER2.toInteger())
@@ -21,7 +22,11 @@ pipeline {
                 }
             }
         }
-        stage('Multiplication') {
+        }
+        
+        stage("Parallel Execution"){
+            parallel{
+            stage('Multiplication') {
             steps {
                 script {
                     def mul = (NUMBER1.toInteger() * NUMBER2.toInteger())
@@ -36,6 +41,9 @@ pipeline {
                     echo "The Divided value is ${divide}"
                 }
             }
+        }
+            }
+        
         }
     }
 }
