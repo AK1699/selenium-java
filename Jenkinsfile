@@ -5,8 +5,8 @@ pipeline {
         NUMBER2 = '10'
     }
     stages {
-        stage('Sequencial Execution'){
-            stages{
+        stage("Parallel Execution"){
+            parallel{
         stage('Addition') {
             steps {
                 script {
@@ -23,12 +23,6 @@ pipeline {
                 }
             }
         }
-            }
-            
-        }
-        
-        stage("Parallel Execution"){
-            parallel{
             stage('Multiplication') {
             steps {
                 script {
